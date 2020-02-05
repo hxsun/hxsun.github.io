@@ -5,15 +5,17 @@
   
 
   
-  <title>My First Test Post | Kenneth&#39;s Hexo Blog</title>
+  <title>Tips on Deploying Hexo on GH Pages | Kenneth&#39;s Hexo Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My First Test Post">
-<meta property="og:url" content="http://hxsun.github.io/2020/02/05/My-First-Test-Post/index.html">
+  <meta name="description" content="New GH policy for PAGES由于现在Github对于免费版本已经不支持选择Page Source, 因此官方的CI Config Sample就不能很好的工作了. 官方的配置是将master branch下的所有原始文件编译至gh-pages branch下. 所以需要将.travis.yml做部分修改. 我新创建了staging branch作为写作的初始branch. Old">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tips on Deploying Hexo on GH Pages">
+<meta property="og:url" content="http://hxsun.github.io/2020/02/05/Tips-on-Deploying-Hexo-on-GH-Pages/index.html">
 <meta property="og:site_name" content="Kenneth&#39;s Hexo Blog">
+<meta property="og:description" content="New GH policy for PAGES由于现在Github对于免费版本已经不支持选择Page Source, 因此官方的CI Config Sample就不能很好的工作了. 官方的配置是将master branch下的所有原始文件编译至gh-pages branch下. 所以需要将.travis.yml做部分修改. 我新创建了staging branch作为写作的初始branch. Old">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-05T03:14:57.000Z">
-<meta property="article:modified_time" content="2020-02-05T08:03:21.789Z">
+<meta property="article:published_time" content="2020-02-05T08:29:19.000Z">
+<meta property="article:modified_time" content="2020-02-05T08:31:31.705Z">
 <meta property="article:author" content="Kenenth S.">
 <meta name="twitter:card" content="summary">
   
@@ -64,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-First-Test-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Tips-on-Deploying-Hexo-on-GH-Pages" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/05/My-First-Test-Post/" class="article-date">
-  <time datetime="2020-02-05T03:14:57.000Z" itemprop="datePublished">2020-02-05</time>
+    <a href="/2020/02/05/Tips-on-Deploying-Hexo-on-GH-Pages/" class="article-date">
+  <time datetime="2020-02-05T08:29:19.000Z" itemprop="datePublished">2020-02-05</time>
 </a>
     
   </div>
@@ -78,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      My First Test Post
+      Tips on Deploying Hexo on GH Pages
     </h1>
   
 
@@ -86,11 +88,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="New-GH-policy-for-PAGES"><a href="#New-GH-policy-for-PAGES" class="headerlink" title="New GH policy for PAGES"></a>New GH policy for PAGES</h2><p>由于现在Github对于免费版本已经不支持选择Page Source, 因此官方的CI Config Sample就不能很好的工作了. 官方的配置是将master branch下的所有原始文件编译至gh-pages branch下.</p>
+<p>所以需要将.travis.yml做部分修改. 我新创建了staging branch作为写作的初始branch.</p>
+<figure class="highlight xml"><figcaption><span>Old version</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">...</span><br><span class="line">deploy:</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>Updated version</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - staging # build staging branch instead</span><br><span class="line">...</span><br><span class="line">deploy:</span><br><span class="line">  target_branch: master</span><br><span class="line">  on:</span><br><span class="line">  branch: staging</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hxsun.github.io/2020/02/05/My-First-Test-Post/" data-id="ck690z9ex00000lkva1pxef8z" class="article-share-link">Share</a>
+      <a data-url="http://hxsun.github.io/2020/02/05/Tips-on-Deploying-Hexo-on-GH-Pages/" data-id="ck691zgqa00002ek736mj383a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +153,7 @@
           </li>
         
           <li>
-            <a href="/2020/02/05/My-First-Test-Post/">My First Test Post</a>
+            <a href="/2020/02/05/Tips-on-Deploying-Hexo-on-GH-Pages/">Tips on Deploying Hexo on GH Pages</a>
           </li>
         
       </ul>
