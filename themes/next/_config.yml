@@ -428,9 +428,9 @@ font:
 
   # Global font settings used for all elements inside <body>.
   global:
-    external: true
+    external: false
     family: Microsoft YaHei
-    size: 1
+    size: 0.875 
 
   # Font settings for site title (.site-title).
   title:
